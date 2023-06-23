@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.MachineTest" parent="Base.Theme.MachineTest" />
+
 </resources>

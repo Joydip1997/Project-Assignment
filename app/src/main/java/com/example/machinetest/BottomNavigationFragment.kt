@@ -32,6 +32,7 @@ class BottomNavigationFragment : Fragment() {
 
         binding.bottomNavigation.setupWithNavController(navController)
         binding.bottomNavigation.itemIconTintList = null
+        binding.bottomNavigation.itemActiveIndicatorColor = null
 
 
     }

@@ -1,4 +1,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
     <item
         android:id="@+id/home"
         android:icon="@drawable/ic_home_icon_selector"
@@ -7,4 +8,5 @@
         android:id="@+id/about"
         android:icon="@drawable/ic_about_icon_selector"
         android:title="About" />
+    </group>
 </menu>

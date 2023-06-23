@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.machinetest.adapters.ProductImageViewPagerAdapter
 import com.example.machinetest.data.model.productList
 import com.example.machinetest.databinding.FragmentProductDetailsBinding
@@ -47,6 +48,7 @@ class ProductDetailsFragment : Fragment() {
                         tvProductPartNoValue.text = it.productPartNumber
                         tvProductDescriptionValue.text = it.productDescription
                         tvMrp.text = it.productPrice.toString()
+                        ivBack.setOnClickListener { findNavController().popBackStack() }
                     }
                 }
 

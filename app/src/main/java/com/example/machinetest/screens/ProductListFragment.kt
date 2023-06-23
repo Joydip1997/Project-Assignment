@@ -37,7 +37,7 @@ class ProductListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-
+        binding.icDotsMenu.setOnClickListener { (requireActivity() as MainActivity).openDrawerLayout() }
         binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.recyclerView.adapter = productListAdapter
         productListAdapter.setProductList(productList = productList)
