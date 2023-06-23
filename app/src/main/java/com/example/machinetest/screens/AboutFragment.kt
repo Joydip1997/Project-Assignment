@@ -24,7 +24,7 @@ class AboutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tv.setOnClickListener { ( requireActivity() as MainActivity).navigateToProductDetails() }
+        binding.tv.setOnClickListener {  }
     }
 
 

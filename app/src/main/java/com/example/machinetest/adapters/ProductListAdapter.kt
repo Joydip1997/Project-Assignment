@@ -10,14 +10,14 @@ class ProductListAdapter() :
     RecyclerView.Adapter<ProductListAdapter.ProductListViewHolder>() {
 
     private var _productList : ArrayList<Product> = ArrayList()
-    private var onProductClick: ((String) -> Unit)? = null
+    private var onProductClick: ((Int) -> Unit)? = null
 
     fun setProductList(productList: ArrayList<Product>){
         _productList = productList
         notifyDataSetChanged()
     }
 
-    fun setOnProductItemClickListener(onProductClick : (productId : String) -> Unit){
+    fun setOnProductItemClickListener(onProductClick : (productId : Int) -> Unit){
         this.onProductClick = onProductClick
     }
 
