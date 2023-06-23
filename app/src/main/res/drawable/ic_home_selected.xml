@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#0581D7" />
+            <size
+                android:width="50dp"
+                android:height="50dp" />
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/ic_home"
+        android:width="24dp"
+        android:height="24dp"
+        android:gravity="center">
+    </item>
+</layer-list>

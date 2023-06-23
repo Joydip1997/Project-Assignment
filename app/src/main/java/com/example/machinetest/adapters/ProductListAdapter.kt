@@ -22,7 +22,6 @@ class ProductListAdapter() :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductListViewHolder {
-
         return ProductListViewHolder(ItemProductBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
@@ -37,7 +36,7 @@ class ProductListAdapter() :
     inner class ProductListViewHolder(private val binding : ItemProductBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(product: Product) {
             binding.apply {
-                imageView.setImageResource(product.productImage)
+                imageView.setImageResource(product.productImages.first())
                 tvTitle.text = product.productTitle
                 tvDescription.text = product.productDescription
                 tvMpr.text = product.productPrice.toString()

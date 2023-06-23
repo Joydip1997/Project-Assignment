@@ -31,6 +31,7 @@ class BottomNavigationFragment : Fragment() {
         val navController = navHostFragment.navController
 
         binding.bottomNavigation.setupWithNavController(navController)
+        binding.bottomNavigation.itemIconTintList = null
 
 
     }
