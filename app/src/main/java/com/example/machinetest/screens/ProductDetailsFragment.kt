@@ -42,16 +42,10 @@ class ProductDetailsFragment : Fragment() {
                 product?.let {
                     adapter.setImageList(it.productImages)
                     binding.apply {
-                        layoutProductManufacturer.tvProductTitle.text = it.productManufacturer
-                        layoutProductModel.apply {
-                            tvTitle.text = "Vehicle Model:"
-                            tvProductTitle.text = it.productPartModel
-                        }
-                        layoutProductPartDetails.tvProductTitle.text = it.productPartNumber
-                        layoutProductPartDescription.apply {
-                            tvTitle.text = "Description:"
-                            tvProductTitle.text = it.productDescription
-                        }
+                        tvProductManuValue.text = it.productManufacturer
+                        tvProductModelValue.text = it.productPartModel
+                        tvProductPartNoValue.text = it.productPartNumber
+                        tvProductDescriptionValue.text = it.productDescription
                         tvMrp.text = it.productPrice.toString()
                     }
                 }

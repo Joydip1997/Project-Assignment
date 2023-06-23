@@ -41,24 +41,69 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_page_title" />
 
-    <include
-        android:id="@+id/layout_product_manufacturer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        layout="@layout/layout_product_item_details_title_and_value"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_page_title" />
 
-    <include
-        android:id="@+id/layout_product_model"
+    <TextView
+        android:id="@+id/tv_product_manu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        layout="@layout/layout_product_item_details_title_and_value"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/outfit_regular"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Vehicle Manufacturer:"
+        android:textColor="@color/primary_title_color"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_back"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back" />
+
+    <TextView
+        android:id="@+id/tv_product_manu_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Numquam Eius"
+        android:textColor="#585795"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_product_manu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_product_manufacturer" />
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/tv_product_manu"
+        app:layout_constraintTop_toTopOf="@+id/tv_product_manu" />
+
+
+    <TextView
+        android:id="@+id/tv_product_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/outfit_regular"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Vehicle Model:"
+        android:textColor="@color/primary_title_color"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_product_manu"
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_manu" />
+
+    <TextView
+        android:id="@+id/tv_product_model_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Numquam Eius"
+        android:textColor="#585795"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_product_model"
+        app:layout_constraintStart_toStartOf="@+id/tv_product_manu_value"
+        app:layout_constraintTop_toTopOf="@+id/tv_product_model" />
 
 
     <androidx.viewpager2.widget.ViewPager2
@@ -68,7 +113,7 @@
         app:layout_constraintBottom_toTopOf="@+id/container_product_details"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_product_model" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_model" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/into_tab_layout"
@@ -87,34 +132,79 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container_product_details"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
         android:background="@drawable/rounded_card_top_left_corner_background"
         app:layout_constraintBottom_toTopOf="@+id/container_product_price"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
 
-        <include
-            android:id="@+id/layout_product_part_details"
-            layout="@layout/layout_product_item_title_and_value"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_product_part_no"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/outfit_bold"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Part No:"
+            android:textColor="@color/primary_title_color"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.20"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <include
-            android:id="@+id/layout_product_part_description"
-            layout="@layout/layout_product_item_title_and_value"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_product_part_no_value"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito_regular"
+            android:gravity="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Numquam Eius"
+            android:textColor="#585795"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_product_part_no"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layout_product_part_details" />
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toEndOf="@+id/tv_product_part_no"
+            app:layout_constraintTop_toTopOf="@+id/tv_product_part_no" />
+
+
+        <TextView
+            android:id="@+id/tv_product_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/outfit_bold"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Description:"
+            android:textColor="@color/primary_title_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_product_part_no"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_part_no" />
+
+        <TextView
+            android:id="@+id/tv_product_description_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
+            android:gravity="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Numquam Eius"
+            android:textColor="#585795"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_product_description"
+            app:layout_constraintStart_toStartOf="@+id/tv_product_part_no_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_product_description" />
 
 
 
