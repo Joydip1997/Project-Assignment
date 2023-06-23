@@ -15,4 +15,14 @@
         android:name="com.example.machinetest.screens.AboutFragment"
         android:label="fragment_product_details"
         tools:layout="@layout/fragment_product_details" />
+    <fragment
+        android:id="@+id/contact"
+        android:name="com.example.machinetest.screens.ContactFragment"
+        android:label="ContactFragment"
+        tools:layout="@layout/fragment_contact"/>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.machinetest.screens.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
 </navigation>
