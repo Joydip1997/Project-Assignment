@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="color_primary">#5B9DFF</color>
+    <color name="color_primary_gradient_1">#0090F4</color>
+    <color name="color_primary_gradient_2">#0F57B5</color>
+    <color name="color_secondary">#B8C9E2</color>
+    <color name="color_card_bg">#80D6D5EE</color>
+    <color name="primary_title_color">#363D79</color>
+
+</resources>

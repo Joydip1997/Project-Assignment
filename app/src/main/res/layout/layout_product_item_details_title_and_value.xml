@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_bold"
+        android:text="Vehicle Manufacturer:"
+        android:layout_marginEnd="12dp"
+        android:textColor="@color/primary_title_color"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/tv_product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:text="Numquam Eius"
+        android:textColor="#585795"
+        android:textSize="16sp" />
+
+</LinearLayout>
