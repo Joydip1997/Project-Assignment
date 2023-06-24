@@ -6,11 +6,12 @@
     android:background="#F8F8FF"
     android:padding="16dp">
 
-    <!-- Product 1 -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Product Title"
+        android:textColor="@color/primary_title_color"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -18,13 +19,15 @@
         android:id="@+id/editTextProductTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:hint="Enter product title" />
 
-    <!-- Product 2 -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Product Description"
+        android:textColor="@color/primary_title_color"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp" />
@@ -33,13 +36,15 @@
         android:id="@+id/editTextProductDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:hint="Enter product description" />
 
-    <!-- Product 3 -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Product Price"
+        android:textColor="@color/primary_title_color"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp" />
@@ -49,13 +54,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
+        android:textColor="@color/black"
         android:hint="Enter product price" />
 
-    <!-- Product 4 -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Product Manufacturer"
+        android:textColor="@color/primary_title_color"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp" />
@@ -64,14 +71,16 @@
         android:id="@+id/editTextProductManufacturer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:hint="Enter product Manufacturer" />
 
 
-    <!-- Product 4 -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Product Model"
+        android:textColor="@color/primary_title_color"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp" />
@@ -80,13 +89,15 @@
         android:id="@+id/editTextProductModel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:hint="Enter product Model" />
 
-    <!-- Product 4 -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Product Part Number"
+        android:textColor="@color/primary_title_color"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp" />
@@ -95,6 +106,7 @@
         android:id="@+id/editTextProductPartNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:hint="Enter product part number" />
 
 
@@ -118,7 +130,7 @@
             android:paddingVertical="12dp"
             android:gravity="center"
             android:layout_marginEnd="2dp"
-            android:background="@drawable/rounded_gradient_background_blue"
+            android:background="@drawable/rounded_corner_gradient_background_blue"
             android:text="Add Product" />
 
         <TextView
@@ -131,7 +143,7 @@
             android:paddingVertical="12dp"
             android:gravity="center"
             android:layout_marginStart="2dp"
-            android:background="@drawable/rounded_gradient_background_blue"
+            android:background="@drawable/rounded_corner_gradient_background_blue"
             android:text="GoTo Product List" />
 
     </LinearLayout>

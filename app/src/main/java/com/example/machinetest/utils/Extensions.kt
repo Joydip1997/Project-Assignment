@@ -15,3 +15,11 @@ fun <T> Flow<T>.collectIn(
         }
     }
 }
+
+fun String.toSafeFloat(): Float {
+    return try {
+        this.toFloat()
+    }catch (e : Exception){
+        0f
+    }
+}

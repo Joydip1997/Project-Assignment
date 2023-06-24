@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.machinetest.BottomNavigationFragment
 import com.example.machinetest.MainActivity
 import com.example.machinetest.adapters.ProductListAdapter
-import com.example.machinetest.data.model.productList
 import com.example.machinetest.databinding.FragmentProductListBinding
 import com.example.machinetest.utils.collectIn
 import dagger.hilt.android.AndroidEntryPoint
@@ -42,7 +41,6 @@ class ProductListFragment : Fragment() {
         binding.icDotsMenu.setOnClickListener { (bottomNavigationFragment as BottomNavigationFragment).openDrawer() }
         binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.recyclerView.adapter = productListAdapter
-        productListAdapter.setProductList(productList = productList)
         productListAdapter.setOnProductItemClickListener {productId->
             (requireActivity() as MainActivity).navigateToProductDetails(productId)
         }

@@ -14,14 +14,19 @@ import javax.inject.Inject
 @HiltViewModel
 class AddProductViewModel @Inject constructor(private val productRepository: ProductRepository) : ViewModel() {
 
-    private val _isProductAdded : MutableSharedFlow<Unit> = MutableSharedFlow()
-    val isProductAdded : SharedFlow<Unit> = _isProductAdded.asSharedFlow()
+    private val _isProductAdded : MutableSharedFlow<Boolean> = MutableSharedFlow()
+    val isProductAdded : SharedFlow<Boolean> = _isProductAdded.asSharedFlow()
 
 
     fun addNewProduct(product: Product){
         viewModelScope.launch {
-            productRepository.addNewProduct(product=product)
-            _isProductAdded.emit(Unit)
+            if(!product.hasProperData()){
+                _isProductAdded.emit(false)
+            }else{
+                productRepository.addNewProduct(product=product)
+                _isProductAdded.emit(true)
+            }
+
         }
     }
 }

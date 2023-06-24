@@ -52,7 +52,7 @@
         android:background="#EDEFF9"
         app:itemIconSize="50dp"
         app:itemShapeFillColor="@drawable/navigation_menu_item_background"
-        app:itemShapeInsetStart="40dp"
+        app:itemShapeInsetStart="32dp"
         app:itemShapeInsetEnd="40dp"
         app:itemTextColor="#363D79"
         app:itemRippleColor="@null"

@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.machinetest.adapters.ProductImageViewPagerAdapter
-import com.example.machinetest.data.model.productList
 import com.example.machinetest.databinding.FragmentProductDetailsBinding
 import com.example.machinetest.utils.collectIn
 import com.google.android.material.tabs.TabLayoutMediator
