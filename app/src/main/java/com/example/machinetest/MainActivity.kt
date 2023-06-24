@@ -32,14 +32,9 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
-
     }
 
-    fun openDrawerLayout(){
-        binding.drawerLayout.apply {
-            openDrawer(GravityCompat.START)
-        }
-    }
+
 
     fun navigateToProductDetails(productId : Int){
         Bundle().apply {

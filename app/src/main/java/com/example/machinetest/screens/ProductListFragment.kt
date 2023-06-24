@@ -1,12 +1,14 @@
 package com.example.machinetest.screens
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.machinetest.BottomNavigationFragment
 import com.example.machinetest.MainActivity
 import com.example.machinetest.adapters.ProductListAdapter
 import com.example.machinetest.data.model.productList
@@ -36,8 +38,8 @@ class ProductListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        binding.icDotsMenu.setOnClickListener { (requireActivity() as MainActivity).openDrawerLayout() }
+        val bottomNavigationFragment = parentFragment?.requireParentFragment()
+        binding.icDotsMenu.setOnClickListener { (bottomNavigationFragment as BottomNavigationFragment).openDrawer() }
         binding.recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.recyclerView.adapter = productListAdapter
         productListAdapter.setProductList(productList = productList)

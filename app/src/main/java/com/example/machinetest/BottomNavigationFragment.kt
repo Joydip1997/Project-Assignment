@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.GravityCompat
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -31,17 +32,18 @@ class BottomNavigationFragment : Fragment() {
         val navController = navHostFragment.navController
 
         binding.bottomNavigation.setupWithNavController(navController)
+        binding.navigation.setupWithNavController(navController)
         binding.bottomNavigation.itemIconTintList = null
         binding.bottomNavigation.itemActiveIndicatorColor = null
+        binding.navigation.itemIconTintList = null
 
 
     }
 
-    fun navigateToProductDetails(){
-        findNavController().navigate(R.id.productDetailsFragment)
+
+    fun openDrawer() {
+        binding.myDrawerLayout.openDrawer(GravityCompat.START)
     }
-
-
 
 
 }
